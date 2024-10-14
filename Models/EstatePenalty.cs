@@ -68,6 +68,24 @@ namespace ThekwiniAdvanaced.Models
             db.SaveChanges();
         }
 
-        //1.6  
+        //1.6
+        public bool CheckLicense()
+        {
+            AppDBContext db = new AppDBContext();
+            Owner owner = (from d in db.owners
+                           where d.OwnerId == OwnerId
+                           select d).FirstOrDefault();
+
+            if(owner.Status=="Valid")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
     }
 }
