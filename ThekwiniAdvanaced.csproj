@@ -45,13 +45,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -124,13 +126,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\EstatePenaltiesController.cs" />
+    <Compile Include="Controllers\EstateVMsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OwnersController.cs" />
+    <Compile Include="Controllers\ViolationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AppDBContext.cs" />
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\EstatePenalty.cs" />
+    <Compile Include="Models\EstateVM.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\Violation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,6 +179,31 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Areas\Create.cshtml" />
+    <Content Include="Views\Areas\Delete.cshtml" />
+    <Content Include="Views\Areas\Details.cshtml" />
+    <Content Include="Views\Areas\Edit.cshtml" />
+    <Content Include="Views\Areas\Index.cshtml" />
+    <Content Include="Views\EstatePenalties\Create.cshtml" />
+    <Content Include="Views\EstatePenalties\Delete.cshtml" />
+    <Content Include="Views\EstatePenalties\Details.cshtml" />
+    <Content Include="Views\EstatePenalties\Edit.cshtml" />
+    <Content Include="Views\EstatePenalties\Index.cshtml" />
+    <Content Include="Views\EstateVMs\Create.cshtml" />
+    <Content Include="Views\EstateVMs\Delete.cshtml" />
+    <Content Include="Views\EstateVMs\Details.cshtml" />
+    <Content Include="Views\EstateVMs\Edit.cshtml" />
+    <Content Include="Views\EstateVMs\Index.cshtml" />
+    <Content Include="Views\Owners\Create.cshtml" />
+    <Content Include="Views\Owners\Delete.cshtml" />
+    <Content Include="Views\Owners\Details.cshtml" />
+    <Content Include="Views\Owners\Edit.cshtml" />
+    <Content Include="Views\Owners\Index.cshtml" />
+    <Content Include="Views\Violations\Create.cshtml" />
+    <Content Include="Views\Violations\Delete.cshtml" />
+    <Content Include="Views\Violations\Details.cshtml" />
+    <Content Include="Views\Violations\Edit.cshtml" />
+    <Content Include="Views\Violations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

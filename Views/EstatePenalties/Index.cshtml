@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ThekwiniAdvanaced.Models.EstatePenalty>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Area.AreaName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.OwnerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Violation.ViolationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPenaltyCost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area.AreaName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.OwnerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Violation.ViolationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalPenaltyCost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PenaltyId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PenaltyId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PenaltyId })
+        </td>
+    </tr>
+}
+
+</table>

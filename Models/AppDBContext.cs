@@ -15,5 +15,6 @@ namespace ThekwiniAdvanaced.Models
 
         public DbSet<Violation> violations { get; set; }
         public DbSet<EstatePenalty> estatePenalties { get; set; }
+        public DbSet<EstateVM> estateVMs { get; set; }
     }
 }

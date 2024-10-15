@@ -1,0 +1,34 @@
+﻿@model ThekwiniAdvanaced.Models.Violation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Violation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ViolationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViolationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViolationCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViolationCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ViolationCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
